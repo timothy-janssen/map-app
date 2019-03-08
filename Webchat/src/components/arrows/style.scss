@@ -1,0 +1,18 @@
+.RecastApp .RecastAppArrow,
+.CaiApp .CaiAppArrow {
+  background: white !important;
+  display: flex;
+  z-index: 2;
+
+  &.prev {
+    left: 0;
+  }
+
+  &.next {
+    right: 0;
+  }
+
+  .arrowSvg {
+    width: 15px;
+  }
+}

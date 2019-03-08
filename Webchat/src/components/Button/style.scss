@@ -1,0 +1,25 @@
+.RecastApp .RecastAppButton, .CaiApp .CaiAppButton {
+  padding: 0.5rem;
+
+  cursor: pointer;
+  text-align: center;
+
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+.RecastApp, .CaiApp {
+  .RecastAppButton + .RecastAppButton, .CaiAppButton + .CaiAppButton {
+    border-top: 1px solid lightgrey;
+  }
+}
+
+.RecastApp .RecastAppButton-Link, .CaiApp .CaiAppButton-Link {
+  @extend .CaiAppButton;
+  @extend .RecastAppButton;
+  text-decoration: none;
+  display: block;
+  &:hover {
+    text-decoration: none;
+  }
+}

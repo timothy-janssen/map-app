@@ -1,0 +1,296 @@
+.RecastAppMessageContainer, .CaiAppMessageContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &.bot {
+    justify-content: flex-start;
+  }
+}
+
+.RecastApp .RecastAppMessage, .CaiApp .CaiAppMessage {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 1rem 0.5rem;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  position: relative;
+
+  &--logo {
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 0.5rem;
+    align-self: flex-end;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1 !important;
+    }
+  }
+
+  &--JsonButton {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding-left: 0.5rem;
+    margin-left: -1rem;
+    margin-top: -0.6rem;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: -7px;
+  }
+
+  &--retry {
+    font-size: 12px;
+    margin: 0 10px;
+    text-align: right;
+    color: #9e9e9e;
+
+    &.bot {
+      text-align: left;
+    }
+
+    .button {
+      cursor: pointer;
+      color: #2196f3;
+    }
+  }
+
+  &.bot {
+    flex-direction: row;
+
+    .Message--logo {
+      margin: 0 0.5rem 0 0;
+    }
+  }
+
+  /*
+   * Text
+   */
+
+  .RecastAppText, .CaiAppText {
+    max-width: 290px;
+    padding: 0.8rem;
+    border-radius: 3px;
+
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  /*
+   * Picture
+   */
+
+  .RecastAppPicture, .CaiAppPicture {
+    width: 270px;
+    max-height: 270px;
+
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+  }
+
+  /*
+   * QuickReplies
+   */
+
+  .RecastAppQuickReplies, .CaiAppQuickReplies {
+    display: flex;
+    flex-direction: column;
+
+    &--slider {
+      margin-top: 0.5rem;
+      max-width: 290px;
+    }
+
+    &--button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 34px;
+      padding: 0 1rem;
+      margin-left: 0.5rem;
+
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 25px;
+    }
+  }
+
+  /*
+   * Buttons
+   */
+  .Buttons {
+    width: 270px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+
+    &--title {
+      max-width: 270px;
+      padding: 0.8rem;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+    }
+
+    &--container {
+      border-top: 1px solid lightgrey;
+    }
+  }
+
+  /*
+   * Card
+   */
+
+  .RecastAppCard, .CaiAppCard {
+    width: 270px;
+
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+
+    &--img {
+      width: 270px;
+      max-height: 270px;
+
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    &--text {
+      padding: 0.4rem;
+
+      &-title {
+        font-weight: bold;
+      }
+
+      &-subtitle {
+        font-size: 14px;
+        font-weight: lighter;
+      }
+    }
+
+    &--button-container {
+      border-top: 1px solid lightgrey;
+    }
+  }
+
+  /*
+   * List
+   */
+
+  .RecastAppList, .CaiAppList {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+
+    &--button {
+      border-top: 1px solid lightgrey;
+    }
+
+    .RecastAppListElement, .CaiAppListElement {
+      display: flex;
+      width: 290px;
+
+      &--img {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+
+        padding: 0.2rem;
+      }
+
+      &--container {
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid lightgrey;
+
+        width: 100%;
+        padding: 0.2rem;
+      }
+
+      &--title {
+        font-weight: bold;
+      }
+
+      &--subtitle {
+        font-size: 14px;
+        font-weight: lighter;
+        flex-grow: 1;
+      }
+
+      &--button {
+        align-self: flex-end;
+
+        padding: 0.2rem;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        color: cornflowerblue;
+        text-decoration: none;
+      }
+    }
+
+    .RecastAppListElement + .RecastAppListElement, .CaiAppListElement + .CaiAppListElement {
+      border-top: 1px solid lightgrey;
+    }
+  }
+}
+
+/*
+  * Slider
+  */
+
+.RecastAppSlider,
+.Slider,
+.CaiAppSlider,
+.Slider {
+  max-width: 300px;
+
+  .Arrow {
+    width: 25px;
+    height: 25px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    line-height: 17px;
+
+    color: grey !important;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    text-align: center;
+
+    &.slick-disabled {
+      display: none !important;
+    }
+  }
+
+  .slick-list {
+    height: fit-content;
+    height: -moz-fit-content;
+  }
+
+  .slick-next {
+    @extend .Arrow;
+  }
+
+  .slick-prev {
+    @extend .Arrow;
+  }
+
+  .slick-prev:before {
+    display: none !important;
+  }
+
+  .slick-next:before {
+    display: none !important;
+  }
+}

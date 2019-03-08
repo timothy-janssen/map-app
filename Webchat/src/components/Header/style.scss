@@ -1,0 +1,29 @@
+.RecastApp .RecastAppHeader, .CaiApp .CaiAppHeader {
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+
+  &--logo {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+  }
+
+  &--title {
+    font-weight: bold;
+    flex-grow: 1;
+  }
+
+  &--btn {
+    cursor: pointer;
+    margin: 1rem;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media only screen and (min-width: 420px) and (min-height: 575px) {
+  .RecastApp .RecastAppHeader, .CaiApp .CaiAppHeader {
+    border-radius: 3px 3px 0 0;
+  }
+}

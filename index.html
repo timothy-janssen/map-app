@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <style>
+      #map {
+        height: 90%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>React App</title>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div id="recast-webchat-div"></div>
+
+    <button onClick="zoom(1)">Zoom In!</button>
+
+    <div id="map"></div>
+    <script type="text/javascript" src="map_controls.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzyi7nAzuYeGcn7dFjO97WxMvGrhDmiKw&callback=initMap" async defer></script>
+
+    <script 
+      type="text/javascript"
+      src="Webchat/dist/webchat.js"
+      channelId="31305c11-c7bb-4346-b725-0fac9a4bb8a2"
+      token="1d61a259217bf0ee8f3d9b34a141c58f"
+      id="recast-webchat"
+    ></script>
+</body>
+</html>

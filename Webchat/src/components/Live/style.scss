@@ -1,0 +1,18 @@
+.RecastApp .RecastAppLive, .CaiApp .CaiAppLive {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: scroll;
+
+  &--message-container {
+    flex-grow: 1;
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width: 420px) and (min-height: 575px) {
+  .RecastApp .RecastAppLive, .CaiApp .CaiAppLive {
+    height: 460px;
+  }
+}
